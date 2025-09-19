@@ -9,6 +9,10 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT
+const allowedOrigin = [
+    "http://localhost:5173",
+    "https://book-shelf-tan.vercel.app"
+]
 
 app.use(cookieParser())
 app.use(cors({
